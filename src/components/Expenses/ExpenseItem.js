@@ -6,7 +6,7 @@ import Card from "../UI/Card.js";
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);  //React checks internally if state updated for the first time
   const clickHandler = () => {
-    setTitle("Updated!");
+    //setTitle("Updated!");
   };
 
   return (
@@ -17,7 +17,7 @@ const ExpenseItem = (props) => {
         title={props.title}
       />
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
       <button onClick={clickHandler}>Change Title</button>
